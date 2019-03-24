@@ -5,27 +5,27 @@ key.play();
 
 document.addEventListener('keydown', function(e) {
 if(e.keyCode == 65){
-document.getElementById("piano1").play();
+playNote('piano1')
 }
 if(e.keyCode == 83){
-document.getElementById("piano2").play();
+playNote('piano2')
 }
 if(e.keyCode == 68){
-document.getElementById("piano3").play();
+playNote('piano3')
 }
 if(e.keyCode == 70){
-document.getElementById("piano4").play();
+playNote('piano4')
 }
 if(e.keyCode == 71){
-document.getElementById("piano5").play();
+playNote('piano5')
 }
 if(e.keyCode == 72){
-document.getElementById("piano6").play();
+playNote('piano6')
 }
 if(e.keyCode == 74){
-document.getElementById("piano7").play();
+playNote('piano7')
 }
 if(e.keyCode == 75){
-document.getElementById("piano8").play();
+playNote('piano8')
 }
 });
