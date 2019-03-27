@@ -2,152 +2,91 @@ function playNote(piano){
 const key = document.getElementById(piano);
 key.play();
 }
-    
 document.addEventListener('keydown', function(e) {
-if(e.keyCode == 65){  
-playNote('piano1');
-showPressBtnAnimation('piano1');
+let piano = ''
+switch(e.keyCode){
+case 65: {
+piano = 'piano1';
+break;
 }
+case 83: {
+piano = 'piano2';
+break;
+}
+case 68: {
+piano = 'piano3';
+break;
+}
+case 70: {
+piano = 'piano4';
+break;
+}
+case 71: {
+piano = 'piano5';
+break;
+}
+case 72: {
+piano = 'piano6';
+break;
+}
+case 74: {
+piano = 'piano7';
+break;
+}
+case 75: {
+piano = 'piano8';
+break;
+}
+default: return;
+}
+playNote(piano);
+showPressBtnAnimation(piano);
 });
-        
 function showPressBtnAnimation(btnName){
 const btn = document.querySelector('#'+btnName + '+button');
 btn.classList.add('active');
 }
-    
 document.addEventListener('keyup', function(e) {
-if(e.keyCode == 65){  
-resetBtnAnimation('piano1')
+let piano = ''
+switch(e.keyCode){
+case 65: {
+piano = 'piano1';
+break;
 }
+case 83: {
+piano = 'piano2';
+break;
+}
+case 68: {
+piano = 'piano3';
+break;
+}
+case 70: {
+piano = 'piano4';
+break;
+}
+case 71: {
+piano = 'piano5';
+break;
+}
+case 72: {
+piano = 'piano6';
+break;
+}
+case 74: {
+piano = 'piano7';
+break;
+}
+case 75: {
+piano = 'piano8';
+break;
+}
+default: return;
+}
+playNote(piano);
+resetBtnAnimation(piano);
 });
-
-document.addEventListener('keydown', function(e) {
-if(e.keyCode == 83){  
-playNote('piano2');
-showPressBtnAnimation('piano2');
-}
-});
-            
-function showPressBtnAnimation(btnName){
-const btn = document.querySelector('#'+btnName + '+button');
-btn.classList.add('active');
-}
-        
-document.addEventListener('keyup', function(e) {
-if(e.keyCode == 83){  
-resetBtnAnimation('piano2')
-}
-});  
-
 function resetBtnAnimation(btnName){
 const btn = document.querySelector('#'+btnName + '+button');
 btn.classList.remove('active');
 }
-
-document.addEventListener('keydown', function(e) {
-if(e.keyCode == 68){  
-playNote('piano3');
-showPressBtnAnimation('piano3');
-}
-});
-                
-function showPressBtnAnimation(btnName){
-const btn = document.querySelector('#'+btnName + '+button');
-btn.classList.add('active');
-}
-            
-document.addEventListener('keyup', function(e) {
-if(e.keyCode == 68){  
-resetBtnAnimation('piano3')
-}
-});
-
-document.addEventListener('keydown', function(e) {
-if(e.keyCode == 70){  
-playNote('piano4');
-showPressBtnAnimation('piano4');
-}
-});
-                    
-function showPressBtnAnimation(btnName){
-const btn = document.querySelector('#'+btnName + '+button');
-btn.classList.add('active');
-}
-                
-document.addEventListener('keyup', function(e) {
-if(e.keyCode == 70){  
-resetBtnAnimation('piano4')
-}
-});
-
-document.addEventListener('keydown', function(e) {
-if(e.keyCode == 71){  
-playNote('piano5');
-showPressBtnAnimation('piano5');
-}
-});
-                        
-function showPressBtnAnimation(btnName){
-const btn = document.querySelector('#'+btnName + '+button');
-btn.classList.add('active');
-}
-                    
-document.addEventListener('keyup', function(e) {
-if(e.keyCode == 71){  
-resetBtnAnimation('piano5')
-}
-});
-
-document.addEventListener('keydown', function(e) {
-if(e.keyCode == 72){  
-playNote('piano6');
-showPressBtnAnimation('piano6');
-}
-});
-                            
-function showPressBtnAnimation(btnName){
-const btn = document.querySelector('#'+btnName + '+button');
-btn.classList.add('active');
-}
-                        
-document.addEventListener('keyup', function(e) {
-if(e.keyCode == 72){  
-resetBtnAnimation('piano6')
-}
-});
-
-document.addEventListener('keydown', function(e) {
-if(e.keyCode == 74){  
-playNote('piano7');
-showPressBtnAnimation('piano7');
-}
-});
-                                
-function showPressBtnAnimation(btnName){
-const btn = document.querySelector('#'+btnName + '+button');
-btn.classList.add('active');
-}
-                            
-document.addEventListener('keyup', function(e) {
-if(e.keyCode == 74){  
-resetBtnAnimation('piano7')
-}
-});
-
-document.addEventListener('keydown', function(e) {
-if(e.keyCode == 75){  
-playNote('piano8');
-showPressBtnAnimation('piano8');
-}
-});
-                                    
-function showPressBtnAnimation(btnName){
-const btn = document.querySelector('#'+btnName + '+button');
-btn.classList.add('active');
-}
-                                
-document.addEventListener('keyup', function(e) {
-if(e.keyCode == 75){  
-resetBtnAnimation('piano8')
-}
-});
